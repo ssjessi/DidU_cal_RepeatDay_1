@@ -75,8 +75,6 @@ public class PlanListActivity extends AppCompatActivity {
         });
         today.setText(cYear+" / "+cMonth+" / "+cDate);
 
-        // font customizing(?)
-
         // working with data
         myPlans=findViewById(R.id.MyPlans);
         myPlans.setLayoutManager(new LinearLayoutManager(this));

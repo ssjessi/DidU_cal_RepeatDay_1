@@ -10,21 +10,31 @@ public class PlanItemData {
     String time;
     String alarm;
     String key;
-    ToggleButton complete;
+    String repeatDay;
+    ToggleButton complete; //
 
     public PlanItemData() {
     }
-
-    public PlanItemData(String planName, String memo, String date, String time, String alarm, String key, ToggleButton complete) {
+//
+    public PlanItemData(String planName, String memo, String date, String time, String alarm, String key, String repeatDay, ToggleButton complete) {
         this.planName = planName;
         this.memo = memo;
         this.date = date;
         this.time = time;
         this.alarm = alarm;
         this.key = key;
+        this.repeatDay = repeatDay;
         this.complete = complete;
     }
 
+    public String getRepeatDay() {
+        return repeatDay;
+    }
+
+    public void setRepeatDay(String repeatDay) {
+        this.repeatDay = repeatDay;
+    }
+//
     public ToggleButton getComplete() {
         return complete;
     }

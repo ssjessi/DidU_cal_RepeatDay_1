@@ -11,7 +11,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="190dp"
-        android:background="@color/colorPrimaryDark" >
+        android:background="#000" >
 
         <TextView
             android:id="@+id/MyList"
@@ -72,7 +72,8 @@
                 android:textColorHint="#808080"
                 android:textColor="#000"
                 android:hint="@string/what_is_your_plan"
-                android:autofillHints="" />
+                android:autofillHints=""
+                android:privateImeOptions="defaultInputmode=korean" />
 
             <TextView
                 android:id="@+id/date"
@@ -158,6 +159,36 @@
                 android:textColor="#FFF" />
 
             <TextView
+                android:id="@+id/RepeatDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/repeat"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:id="@+id/selectedRepeatDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="1dp"/>
+
+            <Button
+                android:id="@+id/addRepeat"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:background="@drawable/background_addbutton"
+                android:text="@string/choose_repeated_day_of_week"
+                android:textColor="#FFF" />
+
+            <TextView
                 android:id="@+id/Memo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -180,7 +211,8 @@
                 android:textColorHint="#808080"
                 android:textColor="#000"
                 android:hint="@string/write_memo"
-                android:autofillHints="" />
+                android:autofillHints=""
+                android:privateImeOptions="defaultInputmode=korean" />
         </LinearLayout>
     </ScrollView>
 

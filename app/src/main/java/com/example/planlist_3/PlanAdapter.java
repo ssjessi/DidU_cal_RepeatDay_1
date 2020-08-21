@@ -2,7 +2,9 @@ package com.example.planlist_3;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.text.Layout;
+import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,13 +46,8 @@ public class PlanAdapter extends RecyclerView.Adapter<PlanAdapter.MyViewHolder> 
         myViewHolder.date.setText(planItemData.get(position).getDate());
         myViewHolder.time.setText(planItemData.get(position).getTime());
         myViewHolder.alarm.setText(planItemData.get(position).getAlarm());
-
-        //myViewHolder.complete.setText("true");
-
-//        if(myViewHolder.complete.isChecked())
-//            myViewHolder.complete.setText("true");
-//        else
-//            myViewHolder.complete.setText("false");
+        myViewHolder.repeatDay.setText(planItemData.get(position).getRepeatDay());
+//        myViewHolder.complete.setChecked(planItemData.get(position).getComplete().isChecked());
 
         final String getPlanNameGet=planItemData.get(position).getPlanName();
         final String getMemoGet=planItemData.get(position).getMemo();
@@ -58,6 +55,8 @@ public class PlanAdapter extends RecyclerView.Adapter<PlanAdapter.MyViewHolder> 
         final String getTimeGet=planItemData.get(position).getTime();
         final String getAlarmGet=planItemData.get(position).getAlarm();
         final String getKeyGet=planItemData.get(position).getKey();
+        final String getRepeatDayGet=planItemData.get(position).getRepeatDay();
+//        final String getCompleteGet=planItemData.get(position).getComplete().getText().toString(); //
 
         myViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,6 +68,8 @@ public class PlanAdapter extends RecyclerView.Adapter<PlanAdapter.MyViewHolder> 
                 intent2.putExtra("time", getTimeGet);
                 intent2.putExtra("alarm", getAlarmGet);
                 intent2.putExtra("key", getKeyGet);
+                intent2.putExtra("repeatDay", getRepeatDayGet);
+//                intent2.putExtra("complete", getCompleteGet); //
                 context.startActivity(intent2);
             }
         });
@@ -81,7 +82,7 @@ public class PlanAdapter extends RecyclerView.Adapter<PlanAdapter.MyViewHolder> 
 
     class MyViewHolder extends RecyclerView.ViewHolder
     {
-        TextView planName, memo, date, time, alarm, key;
+        TextView planName, memo, date, time, alarm, key, repeatDay;
         ToggleButton complete;
 
         public MyViewHolder(@NonNull View itemView) {
@@ -92,7 +93,8 @@ public class PlanAdapter extends RecyclerView.Adapter<PlanAdapter.MyViewHolder> 
             date=(TextView) itemView.findViewById(R.id.date);
             time=(TextView) itemView.findViewById(R.id.time);
             alarm=(TextView) itemView.findViewById(R.id.alarm);
-            complete=(ToggleButton) itemView.findViewById(R.id.completeOX);
+            repeatDay=(TextView) itemView.findViewById(R.id.repeat);
+//            complete=(ToggleButton) itemView.findViewById(R.id.completeOX);
         }
     }
 

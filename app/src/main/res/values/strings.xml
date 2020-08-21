@@ -16,6 +16,8 @@
     <string name="plan">Plan</string>
     <string name="what_is_your_plan">What is your plan?</string>
     <string name="choose_date">Choose Date</string>
+    <string name="date2">0000 / 00 / 00</string>
+    <string name="time2">00시 00분</string>
     <string name="date">Date</string>
     <string name="time">Time</string>
     <string name="choose_time">Choose Time</string>
@@ -32,4 +34,7 @@
     <string name="Menu">||</string>
     <string name="todo">TODO</string>
     <string name="backHome"><![CDATA[<]]></string>
+    <string name="Monday">월요일마다</string>
+    <string name="repeat">Repeat</string>
+    <string name="choose_repeated_day_of_week">Choose Repeated Day Of Week</string>
 </resources>
